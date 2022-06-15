@@ -2,7 +2,7 @@
 
 #### Power/Precision Analysis to Determine Minimum Sample Size and Effect
 
-The PowerAnalysis R package contains functions to erform power analysis and/or
+The PowerAnalysis R package contains functions to perform power analysis and/or
 precision analysis for sample means of continuous and binary metrics and sample
 quantiles of continuous metrics, assuming asymptotic normality. One can
 determine the minimum required sample size (MRSS), the minimum required duration

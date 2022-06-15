@@ -1,3 +1,17 @@
+# Copyright 2022 Google LLC
+
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+
+#     https://www.apache.org/licenses/LICENSE-2.0
+
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 #' Power and Precision Analysis
 #'
 #' Conduct a power analysis or precision analysis to determine the minimum
@@ -79,8 +93,7 @@
 #'   is currently not implemented yet but may be implemented in the future.
 #'   The arcsine method is valid is valid only for conversions with binary
 #'   responses. We currently don't offer this method for precision analysis
-#'   or for determining the MDE. This may change in the future. For more
-#'   details, see http://go/cloud-sample-size.
+#'   or for determining the MDE. This may change in the future.
 #' @param alternative Whether the underlying hypothesis test for the power
 #'   precision analysis is one- or two-sided. Defaults to \code{"two_sided"} for
 #'   a two-sided test.
@@ -110,8 +123,6 @@
 #' \itemize{
 #' \item Chow, Shien-Chung, Jun Shao, and Hansheng Wang (2003). \emph{Sample
 #'   Size Calculations in Clinical Research.} Marcel Dekker: New York.
-#' \item "Cloud Sample Size" (http://go/cloud-sample-size)
-#' \item "Minimum Detectable Effect" (http://go/minimum-detectable-effect)
 #' }
 #' @export
 
