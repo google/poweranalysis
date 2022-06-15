@@ -1,53 +1,21 @@
-# New Project Template
+# PowerAnalysis R Package
 
-This repository contains a template that can be used to seed a repository for a
-new Google open source project.
+#### Power/Precision Analysis to Determine Minimum Sample Size and Effect
 
-See [go/releasing](http://go/releasing) (available externally at
-https://opensource.google/docs/releasing/) for more information about
-releasing a new Google open source project.
+The PowerAnalysis R package contains functions to erform power analysis and/or
+precision analysis for sample means of continuous and binary metrics and sample
+quantiles of continuous metrics, assuming asymptotic normality. One can
+determine the minimum required sample size (MRSS), the minimum required duration
+(MRD), or the minimum detectable effect (MDE) and account for design effects
+due to arm imbalance, analysis of covariance (ANCOVA), and cluster
+randomization. There are also helper functions to forecast sample size growth
+over time to convert between sample size growth and duration.
 
-This template uses the Apache license, as is Google's default.  See the
-documentation for instructions on using alternate license.
+#### Installation
 
-## How to use this template
-
-1. Clone it from GitHub.
-    * There is no reason to fork it.
-1. Create a new local repository and copy the files from this repo into it.
-1. Modify README.md and docs/contributing.md to represent your project, not the
-   template project.
-1. Develop your new project!
-
-``` shell
-git clone https://github.com/google/new-project
-mkdir my-new-thing
-cd my-new-thing
-git init
-cp -r ../new-project/* ../new-project/.github .
-git add *
-git commit -a -m 'Boilerplate for new Google open source project'
+```r
+install.packages("devtools")
+library(devtools)
+devtools::install_github("google/PowerAnalysis")
+library(PowerAnalysis)
 ```
-
-## Source Code Headers
-
-Every file containing source code must include copyright and license
-information. This includes any JS/CSS files that you might be serving out to
-browsers. (This is to help well-intentioned people avoid accidental copying that
-doesn't comply with the license.)
-
-Apache header:
-
-    Copyright 2022 Google LLC
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-        https://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.

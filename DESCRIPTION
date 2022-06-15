@@ -1,0 +1,22 @@
+Package: PowerAnalysis
+Version: 0.2
+Date: 2022-06-13
+Title: Power and Precision Analysis to Determine Minimum Sample Size and Effect
+Authors@R: c(person("Shyue-Ming","Loh", role = c("aut", "cre"),
+             email = "shyuemingloh@gmail.com"),
+             person("Randy", "Lai", role = "aut",
+             email = "randylai@google.com"),
+             person("Meeyoung", "Park", role = "aut",
+             email = "meeyoung@google.com"))
+Maintainer: Randy Lai <randylai@google.com>
+Copyright: Copyright (C) 2022 Google, Inc.
+License: Apache License 2.0 | file LICENSE
+Description: Perform power analysis and/or precision analysis for sample means
+  of continuous and binary metrics and sample quantiles of continuous metrics,
+  assuming asymptotic normality. One can determine the minimum required sample
+  size (MRSS), the minimum required duration (MRD), or the minimum detectable
+  effect (MDE) and account for design effects due to arm imbalance, analysis of
+  covariance (ANCOVA), and cluster randomization. There are also helper
+  functions to forecast sample size growth over time to convert between
+  sample size growth and duration.
+Imports: EnvStats, formattable, glue, pwr, tidyverse
