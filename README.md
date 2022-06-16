@@ -19,3 +19,7 @@ library(devtools)
 devtools::install_github("google/PowerAnalysis")
 library(PowerAnalysis)
 ```
+
+#### Disclaimer
+
+This is not an officially supported Google product.
