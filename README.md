@@ -1,5 +1,7 @@
 # PowerAnalysis R Package
 
+Helloword
+
 #### Power/Precision Analysis to Determine Minimum Sample Size and Effect
 
 The PowerAnalysis R package contains functions to perform power analysis and/or
