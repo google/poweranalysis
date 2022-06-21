@@ -479,7 +479,7 @@ ICC <- function(data, y, cluster_id = NULL) {
   } else {
     model_formula <- glue("{y} ~ (1 | {cluster_id})") %>%
       as.formula()
-    varcor <- summary(lmer(model_formula, data = data))$varcor
+    varcor <- summary(lme4::lmer(model_formula, data = data))$varcor
     out <- as.numeric(varcor[[1]] / attr(varcor, "sc")^2)
   }
   return(out)

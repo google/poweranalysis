@@ -19,4 +19,4 @@ Description: Perform power analysis and/or precision analysis for sample means
   covariance (ANCOVA), and cluster randomization. There are also helper
   functions to forecast sample size growth over time to convert between
   sample size growth and duration.
-Imports: EnvStats, formattable, glue, pwr, tidyverse
+Imports: EnvStats, formattable, glue, lme4, pwr, quantreg, tidyverse
