@@ -373,7 +373,7 @@ PowerPropTest <- function(n = NULL, p1 = NULL, p2 = NULL, sig_level = 0.05,
   )
   # Estimate the power analysis estimand
   if (is.null(power)) {
-    power <- eval(parse(test = p_body))
+    power <- eval(parse(text = p_body))
   } else if (is.null(n)) {
     n <- uniroot(
       function(n) {
