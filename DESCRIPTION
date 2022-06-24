@@ -2,7 +2,7 @@ Package: PowerAnalysis
 Version: 0.2
 Date: 2022-06-13
 Title: Power and Precision Analysis to Determine Minimum Sample Size and Effect
-Authors@R: c(person("Shyue-Ming","Loh", role = c("aut", "cre"),
+Authors@R: c(person("Shyue-Ming", "Loh", role = c("aut", "cre"),
              email = "shyuemingloh@gmail.com"),
              person("Randy", "Lai", role = "aut",
              email = "randylai@google.com"),
@@ -20,3 +20,5 @@ Description: Perform power analysis and/or precision analysis for sample means
   functions to forecast sample size growth over time to convert between
   sample size growth and duration.
 Imports: EnvStats, formattable, glue, lme4, pwr, quantreg, tidyverse
+Encoding: UTF-8
+RoxygenNote: 7.2.0
