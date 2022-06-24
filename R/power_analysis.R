@@ -753,7 +753,7 @@ ClusterDeff <- function(cluster_size = NULL, mean = 1, sd = 0, k = NULL,
 #'   Defaults to 4 weeks.
 #' @param arms The number of arms for the experiment. Defaults to 2 arms.
 #' @param traffic_prop The proportion of exposure traffic available for
-#'   experimentation. Defaults to \code{MendelStudyTrafficProportion()}. See
+#'   experimentation. Defaults to \code{StudyTrafficProportion()}. See
 #'   documentation for \code{TrafficProportion} for details.
 #' @param round_up Whether to round up the returned value.
 #' @return A numeric vector of sample size or duration values, depending on
@@ -778,11 +778,17 @@ SampleSizeDurationConversion <- function(n = NULL, duration = NULL, n0 = 1e4,
   }
   return(out)
 }
+
+#' @rdname SampleSizeDurationConversion
+#' @export
 SampleSizeToDuration <- function(n, ...) {
   stopifnot(!is.null(n))
   out <- SampleSizeDurationConversion(n = n, duration = NULL, ...)
   return(out)
 }
+
+#' @rdname SampleSizeDurationConversion
+#' @export
 DurationToSampleSize <- function(duration, ...) {
   stopifnot(!is.null(duration))
   out <- SampleSizeDurationConversion(duration = duration, n = NULL, ...)
@@ -809,9 +815,15 @@ TrafficProportion <- function(type = c("study", "launch")) {
   )
   return(out)
 }
+
+#' @rdname TrafficProportion
+#' @export
 StudyTrafficProportion <- function() {
   return(TrafficProportion(type = "study"))
 }
+
+#' @rdname TrafficProportion
+#' @export
 LaunchTrafficProportion <- function() {
   return(TrafficProportion(type = "launch"))
 }
@@ -1055,9 +1067,15 @@ PowerPrecisionAnalysisData <- function(data, y_binary = NULL,
     Percentize(x = percent_vars, digits = 2)
   return(out)
 }
+
+#' @rdname PowerPrecisionAnalysisData
+#' @export
 PowerAnalysisData <- function(...) {
   return(PowerPrecisionAnalysisData(...))
 }
+
+#' @rdname PowerPrecisionAnalysisData
+#' @export
 PrecisionAnalysisData <- function(...) {
   return(PowerPrecisionAnalysisData(...))
 }
@@ -1220,12 +1238,21 @@ PowerPrecisionAnalysisTable <- function(data, exposure = "exposure",
   out <- Percentize(out, x = percent_vars)
   return(out)
 }
+
+#' @rdname PowerPrecisionAnalysisTable
+#' @export
 DurationTable <- function(...) {
   return(PowerPrecisionAnalysisTable(table_type = "duration", ...))
 }
+
+#' @rdname PowerPrecisionAnalysisTable
+#' @export
 MdeTable <- function(...) {
   return(PowerPrecisionAnalysisTable(table_type = "mde", ...))
 }
+
+#' @rdname PowerPrecisionAnalysisTable
+#' @export
 MaxErrorMarginTable <- function(...) {
   return(PowerPrecisionAnalysisTable(table_type = "mme", ...))
 }

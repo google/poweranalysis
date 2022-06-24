@@ -14,5 +14,5 @@
 
 #' @name PowerAnalysis
 #' @docType package
-#' @import EnvStats, formattable, glue, lme4, pwr, quantreg, tidyverse
+#' @import EnvStats formattable glue lme4 pwr quantreg tidyverse
 "_PACKAGE"
